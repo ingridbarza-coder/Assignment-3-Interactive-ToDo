@@ -15,10 +15,17 @@
         <h1>My To-Do List</h1>
         <p class="subtitle">one thing at a time.</p>
 
+        <div class="tabs">
+            <button class="tab active" data-category="uni">Uni</button>
+            <button class="tab" data-category="social">Social</button>
+            <button class="tab" data-category="personal">Personal</button>
+            <button class="tab" data-category="completed">Completed</button>
+        </div>
+
         <form id="task-form">
-            <input 
-                type="text" 
-                id="task-input" 
+            <input
+                type="text"
+                id="task-input"
                 placeholder="Enter a new task"
             >
             <button type="submit">Add Task</button>
@@ -26,7 +33,11 @@
 
         <p id="message"></p>
 
+        <h2 id="category-title">Uni</h2>
+
         <ul id="task-list"></ul>
+
+        <p id="task-count"></p>
 
     </div>
 

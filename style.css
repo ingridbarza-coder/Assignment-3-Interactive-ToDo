@@ -13,9 +13,10 @@ body {
 }
 
 /* Main to-do paper */
+
 .todo-container {
     width: 90%;
-    max-width: 520px;
+    max-width: 560px;
     padding: 45px 40px;
     background-color: #f6cbd5;
     border: 7px solid #667a4f;
@@ -24,6 +25,7 @@ body {
 }
 
 /* Title */
+
 h1 {
     margin: 0;
     text-align: center;
@@ -34,15 +36,45 @@ h1 {
     text-transform: uppercase;
 }
 
-/* Motivational quote */
 .subtitle {
     text-align: center;
     color: #71805f;
     font-style: italic;
-    margin: 8px 0 30px;
+    margin: 8px 0 28px;
+}
+
+/* Category tabs */
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.tab {
+    border: none;
+    background: none;
+    color: #71805f;
+    font-size: 14px;
+    padding: 7px 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.tab:hover {
+    color: #405032;
+}
+
+.tab.active {
+    color: #405032;
+    font-weight: bold;
+    border-bottom: 2px solid #667a4f;
 }
 
 /* Add task area */
+
 #task-form {
     display: flex;
     gap: 10px;
@@ -82,7 +114,8 @@ h1 {
     background-color: #4f633d;
 }
 
-/* Validation message */
+/* Validation */
+
 #message {
     min-height: 18px;
     margin: 8px 2px;
@@ -90,11 +123,23 @@ h1 {
     font-size: 13px;
 }
 
+/* Current category title */
+
+#category-title {
+    margin: 18px 0 5px;
+    color: #4f633d;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
 /* Task list */
+
 #task-list {
     list-style: none;
     padding: 0;
-    margin: 15px 0 0;
+    margin: 5px 0 0;
 }
 
 .task {
@@ -112,6 +157,7 @@ h1 {
 }
 
 /* Checkbox */
+
 .task-title::before {
     content: "□";
     color: #667a4f;
@@ -119,7 +165,8 @@ h1 {
     margin-right: 12px;
 }
 
-/* Completed task */
+/* Completed tasks */
+
 .task.completed .task-title {
     color: #8d9384;
     text-decoration: line-through;
@@ -131,7 +178,8 @@ h1 {
     font-weight: bold;
 }
 
-/* Delete button */
+/* Delete */
+
 .delete-btn {
     border: none;
     background: none;
@@ -144,4 +192,46 @@ h1 {
 .delete-btn:hover {
     color: #773747;
     text-decoration: underline;
+}
+
+/* Task counter */
+
+#task-count {
+    text-align: right;
+    color: #71805f;
+    font-size: 13px;
+    font-style: italic;
+    margin-top: 15px;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .todo-container {
+        width: 90%;
+        padding: 35px 25px;
+    }
+
+    h1 {
+        font-size: 30px;
+        letter-spacing: 3px;
+    }
+
+    #task-form {
+        flex-direction: column;
+    }
+
+    #task-form button {
+        width: 100%;
+    }
+
+    .tabs {
+        gap: 2px;
+    }
+
+    .tab {
+        font-size: 12px;
+        padding: 6px;
+    }
 }
